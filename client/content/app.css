@@ -1,0 +1,81 @@
+#map { height: 180px; }
+
+body {
+
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Make the body height equal to the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align content at the top and footer at the bottom */
+    position: relative;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+main {
+    flex-grow: 1; /* Grow main content to fill remaining space */
+    z-index: 1; /* Ensure main content appears above the video */
+    position: relative; /* Ensure main content is positioned relative to the body */
+}
+
+header, footer {
+    background-color: lightyellow; /* Example background color */
+    text-align: center;
+    z-index: 2; /* Ensure header and footer appear above the video */
+    width: 100%; /* Ensure header and footer cover the entire width */
+
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+#searchBar {
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* CSS styles for search results */
+#searchResults {
+    list-style-type: none;
+    padding: 0;
+}
+
+#searchResults li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#searchResults li:last-child {
+    border-bottom: none;
+}
+
+#searchResults li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#searchResults li a:hover {
+    color: #000;
+    font-weight: bold;
+}
+.gallery-item {
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}

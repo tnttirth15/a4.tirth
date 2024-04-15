@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tirth Prajapati, Rushi Patel, Vishesh Patel">
+    <meta name="description" content="Assignment_03">
+    <title>Home</title>
+
+    <!--CSS SECTION-->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../config/app.js">
+    <link rel="stylesheet" href="../../client/content/dis.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+
+<header></header>
+
+<div id="discussion-container">
+    <!-- Existing discussion posts will be added here dynamically -->
+</div>
+
+<div id="post-form">
+    <h2>Create a New Post</h2>
+    <div class="input-container">
+        <input type="text" id="post-title" placeholder="Enter title" class="small-input">
+    </div>
+    <div class="input-container">
+        <textarea id="post-description" placeholder="Enter description" class="big-input"></textarea>
+    </div>
+    <button onclick="addDiscussionPost()">Submit</button>
+</div>
+
+
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../config/app.js"></script>
+<script src="../../client/scripts/dis.js"></script>
+<script>
+    function loadPage(url) {
+        fetch('index.html' + url) // Adjust the path as needed based on your directory structure
+            .then(response => response.text())
+            .then(data => {
+                const content = document.getElementById('content');
+                content.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading page content:', error);
+            });
+    }
+</script>
+<footer>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="#">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="privacypolicy.html"><i class="fa-solid fa-lock"></i> Privacy policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="termsofservice.html"><i class="fa-solid fa-sliders"></i> Terms Of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fa-brands fa-contao"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer>
+</body>
+</html>

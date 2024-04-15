@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tirth Prajapati, Rushi Patel">
+    <meta name="description" content="Assignment_02">
+    <title>Login</title>
+
+    <!-- CSS SECTION -->
+    <link rel = "stylesheet" href = "../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href = "../../client/content/app.css">
+    <link rel = "stylesheet" href = "../../client/content/app.css">
+    <link rel = "stylesheet" href = "../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+</head>
+<body>
+
+<header></header>
+<div class="container mt-5" id="content">
+    <main class="container" id="mainContent">
+        <div class="row">
+            <div class="offset-md-3 col-md-6 col-sm-12">
+                <div class="login" id="contentArea">
+                    <h1 class="display-4">Login</h1>
+                    <form id="loginForm" novalidate>
+
+                        <div id="messageArea"></div>
+
+                        <div class="form-group mb-2">
+                            <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="fa fa-user">
+                            </i>
+                          </span>
+                                <input type="text" class="form-control" id="username" name="username"  required
+                                       value="" placeholder="Enter your username">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="fa fa-lock">
+                            </i>
+                          </span>
+                                <input type="password" class="form-control" id="password" name="password"  required
+                                       value="" placeholder="Enter your password">
+                            </div>
+
+                        </div>
+                        <div class="text-end mb-2 ">
+                            <button id="loginButton" type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-sign-in-alt">Login</i></button>
+                            <button id="cancelButton" type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-undo">Cancel</i></button>
+                        </div>
+                    </form>
+
+                </div>
+                <p class="text-center text-muted small">
+                    Don't have an account?
+                    <a href="">Register Here!</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+</div>
+<!-- SCRIPTING SECTION -->
+<script src = "../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src = "../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../config/app.js"></script>
+<script>
+    function loadContent(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                $('#content').html(html); // Load content into the #content section
+            })
+            .catch(error => console.error('Error fetching content:', error));
+        return false; // Prevent default link behavior
+    }
+</script>
+<footer>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="#">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="privacypolicy.html"><i class="fa-solid fa-lock"></i> Privacy policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="termsofservice.html"><i class="fa-solid fa-sliders"></i> Terms Of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fa-brands fa-contao"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer>
+
+</body>
+
+
+</html>

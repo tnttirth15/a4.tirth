@@ -1,0 +1,27 @@
+[
+  {
+    "title": "JAVA-SCRIPT",
+    "date": "2024-03-01",
+    "description": "When a user clicks a button, hovers over an element, or submits a form, these actions and occurrences are referred to as events in web development using JavaScript. Event handlers are routines that run in response to specified events, and JavaScript allows developers to construct them, enabling dynamic and interactive web experiences. JavaScript's event-driven programming makes use of event listeners to identify and react to these occurrences, promoting user interaction, interactivity, and the development of responsive online applications. Events are essential for allowing user interaction and for initiating operations within web pages in response to user input or system events.",
+    "image": "../../client/graphics/event1.webp"
+  },
+  {
+    "title": "API",
+    "date": "2024-03-02",
+    "description": " An application programming interface, or API, is a collection of guidelines, conventions, and instruments that facilitates communication between various software programmes. It specifies the commands and file formats that programmers can utilise to communicate with a specific platform, service, or piece of software. Payment gateways, social media sites, weather data providers, and other external services can all have their features and data accessed via APIs. They promote interoperability, modularity, and reusability in software development by allowing developers to include functionality into their own systems without having to start from scratch.\n",
+    "image": "../../client/graphics/event2.png"
+  },
+  {
+    "title": "CSS",
+    "date": "2024-03-05",
+    "description": "A stylesheet language called CSS (Cascading Style Sheets) is used to manage how HTML content are presented and laid out. It specifies the colours, fonts, sizes, placement, responsiveness, and other aspects of how items are shown on a webpage. With CSS, developers can produce designs that are aesthetically pleasing and maintain consistency across various screen sizes and devices. It applies styling rules, which can be arranged into external stylesheets or integrated into HTML texts, by using selectors to target particular HTML elements. With the introduction of advanced capabilities like animations, transitions, and variable box layouts in CSS3, the most recent version of the language, developers are now able to create dynamic and interactive web experiences.",
+    "image": "../../client/graphics/event3.png",
+
+
+    "2024-03-01": ["JAVA-SCRIPT", "Learn github"],
+    "2024-03-02": ["API", "COMPUTER STUDIES"],
+    "2024-03-05": ["CSS"]
+  }
+
+]
+

@@ -1,0 +1,72 @@
+<!--Group 6-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tirth Prajapati, Rushi Patel">
+    <meta name="description" content="Assignment_02">
+    <title>Portfolio</title>
+
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../client/content/app.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+<body>
+
+<header></header>
+
+<main>
+    <div class="container">
+        <h1 class="mb-5">Portfolio</h1>
+        <div id="projectContainer" class="row">
+        </div>
+        <button id="loadMoreBtn" class="btn btn-primary">Load More</button>
+    </div>
+</main>
+
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../config/app.js"></script>
+<script src="../../client/scripts/portfolio.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Call the loadPage function with the URL of the event.html page
+        loadPage("http://localhost:63342/tirthcssjs/Assignment2.rushi.tirth/Assignment3.rushi.tirth/views/content/portfolio.html");
+    });
+
+    function loadPage(url) {
+        fetch("portfolio.html" + url) // Adjust the path as needed based on your directory structure
+            .then(response => response.text())
+            .then(data => {
+                const content = document.getElementById('content');
+                content.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading page content:', error);
+            });
+    }
+</script>
+<footer>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="#">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="privacypolicy.html"><i class="fa-solid fa-lock"></i> Privacy policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="termsofservice.html"><i class="fa-solid fa-sliders"></i> Terms Of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fa-brands fa-contao"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer>
+</body>
+</html>

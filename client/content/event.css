@@ -1,0 +1,129 @@
+.event-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: inline-block; /* Display boxes side by side */
+    width: calc(33.33% - 20px); /* Set width to fit three boxes in a row */
+    margin-right: 20px; /* Add margin between boxes */
+    vertical-align: top; /* Align boxes to the top */
+}
+
+.event-box:nth-child(3n) {
+    margin-right: 0; /* Remove margin for every third box to ensure proper alignment */
+}
+
+.event-box img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.event-box h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.event-box p {
+    margin: 10px 0;
+}
+
+/* calendar.css */
+.calendar {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.event {
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
+
+/* Styling for the modal used to add new events */
+#addNewEventModal {
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    overflow: auto;
+}
+
+/* Styling for the content inside the modal */
+#addNewEventModal .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Styling for the close button inside the modal */
+#addNewEventModal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#addNewEventModal .close:hover,
+#addNewEventModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Additional styling for the event boxes used to display events */
+.event-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: inline-block; /* Display boxes side by side */
+    width: calc(33.33% - 20px); /* Set width to fit three boxes in a row */
+    margin-right: 20px; /* Add margin between boxes */
+    vertical-align: top; /* Align boxes to the top */
+}
+
+.event-box:nth-child(3n) {
+    margin-right: 0; /* Remove margin for every third box to ensure proper alignment */
+}
+
+.event-box img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.event-box h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.event-box p {
+    margin: 10px 0;
+}
+

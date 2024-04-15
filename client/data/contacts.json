@@ -1,0 +1,20 @@
+{
+  "contacts":
+  [
+    {
+      "DisplayName": "Peter Parker",
+      "ContactNumber":"416-555-5555",
+      "EmailAddress": "peterparker@domain.com"
+    },
+    {
+      "DisplayName": "Vishesh Barkal",
+      "ContactNumber": "123-456-7890",
+      "EmailAddress": "barkalstreaming@domain.com"
+    },
+    {
+      "DisplayName": "Rushi Patel",
+      "ContactNumber": "998-765-4321",
+      "EmailAddress": "jayambe@domain.com"
+    }
+  ]
+}
